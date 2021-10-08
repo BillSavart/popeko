@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="../assets/poppeko.png" alt="poppeko">
+    <PekoButton/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PekoButton from '../components/PekoButton.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  components: { PekoButton }
 }
 </script>
+
+<style>
+  body {
+    background-image: url('../assets/pekora_bg.jpg');
+  }
+</style>
