@@ -1,8 +1,11 @@
 <template>
-    <h3 class="counter">
-        {{ counter }}
-    </h3>
-    <img :src="pekoImg" alt="Pekora image" width="400" heigth="500" @mousedown="peko" @mouseup="noPeko">
+    <div class="wrapper" @mousedown="peko" @mouseup="noPeko">
+        <img src="../assets/poppeko.png" alt="poppeko">
+        <h3 class="counter">
+            {{ counter }}
+        </h3>
+        <img :src="pekoImg" alt="Pekora image" width="400" heigth="500">
+    </div>
 </template>
 
 <script>
@@ -12,7 +15,7 @@ export default {
     data() {
         return { 
             pekoAudio,
-            pekoImg: require('../assets/pekora.jpg'),
+            pekoImg: require('../assets/pekora.png'),
             counter: 0
         };
     },
@@ -21,7 +24,7 @@ export default {
             return this.pekoAudio;
         },
         peko() {
-            this.pekoImg = require('../assets/pekoClicked.jpg');
+            this.pekoImg = require('../assets/peko.png');
             this.counter++;
 
             let audio = new Audio(this.pekoAudio);
@@ -30,7 +33,7 @@ export default {
             });
         },
         noPeko() {
-            this.pekoImg = require('../assets/pekora.jpg');
+            this.pekoImg = require('../assets/pekora.png');
         }
     }
 }
@@ -40,5 +43,9 @@ export default {
     .counter {
         margin: 10px auto;
         font-size: 2em;
+        user-select: none;
+    }
+    img {
+        user-select: none;
     }
 </style>

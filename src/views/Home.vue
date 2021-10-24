@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img src="../assets/poppeko.png" alt="poppeko">
     <PekoButton/>
   </div>
 </template>
@@ -18,5 +17,8 @@ export default {
 <style>
   body {
     background-image: url('../assets/pekora_bg.jpg');
+    background-repeat: space;
+    background-position: center center;
+    background-attachment: fixed;
   }
 </style>
